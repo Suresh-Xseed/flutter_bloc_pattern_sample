@@ -2,7 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:bloc_pattern_sample/models/item_model.dart';
 import 'package:bloc_pattern_sample/blocs/movie_bloc.dart';
 
-class MovieList extends StatelessWidget {
+
+class MovieList extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    return MovieListState();
+  }
+}
+
+class MovieListState extends State<MovieList> {
+
+  @override
+  void initState() {
+    bloc.fetchAllMovies();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    bloc.dispose();
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context) {
     bloc.fetchAllMovies();

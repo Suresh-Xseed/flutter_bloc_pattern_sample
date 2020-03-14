@@ -19,4 +19,4 @@ class MovieBloc {
 
 }
 
-final bloc = MovieBloc();
+final bloc = MovieBloc();                                                                                                                                                                                                                                                                                                                                                                                 
